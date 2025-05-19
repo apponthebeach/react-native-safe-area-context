@@ -40,7 +40,6 @@
     "format:spotless:write": "cd android && ./gradlew spotlessApply",
     "format:check": "yarn format:prettier:check && yarn format:clang:check && yarn format:spotless:check",
     "format:write": "yarn format:prettier:write && yarn format:clang:write && yarn format:spotless:write",
-    "release": "release-it",
     "prepare": "bob build"
   },
   "keywords": [
@@ -64,7 +63,6 @@
     "@react-native/babel-preset": "^0.74.84",
     "@react-native/eslint-config": "^0.74.84",
     "@react-native/eslint-plugin-specs": "^0.74.84",
-    "@release-it/conventional-changelog": "^8.0.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@types/react-test-renderer": "^18.3.0",
@@ -85,12 +83,11 @@
     "react-native": "^0.74.2",
     "react-native-builder-bob": "^0.23.2",
     "react-test-renderer": "^18.3.1",
-    "release-it": "^17.4.0",
     "typescript": "^5.5.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/th3rdwave/react-native-safe-area-context.git"
+    "url": "https://github.com/apponthebeach/react-native-safe-area-context.git"
   },
   "jest": {
     "preset": "react-native",
@@ -104,23 +101,6 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  },
-  "release-it": {
-    "git": {
-      "commitMessage": "chore: release ${version}",
-      "tagName": "v${version}"
-    },
-    "npm": {
-      "publish": true
-    },
-    "github": {
-      "release": true
-    },
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": "angular"
-      }
-    }
   },
   "react-native-builder-bob": {
     "source": "src",
